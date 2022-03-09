@@ -1,0 +1,96 @@
+#tickets {
+  padding-top: 150px;
+  @include d(phone) {
+    padding-top: 100px;
+  }
+  .cbslider {
+    margin-top: 80px;
+    .cbws {
+      position: relative;
+      height: 290px;
+      width: 480px;
+      background: $c06;
+      overflow: hidden;
+      @include d(phone) {
+        width: 100%;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .infocbws {
+        content: "";
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: 0.3s;
+        background: rgba(112, 86, 86, 0.6);
+        .infocb {
+          color: $c06;
+          transition: 0.3s;
+          .cbwsp {
+            font-family: $worksans;
+            font-weight: 300;
+            opacity: 1;
+            // transform: translate3d(-40px, 0, 0);
+            transition: 0.3s 0.2s;
+          }
+          .cbprice {
+            margin-top: 6px;
+            font-family: $quicksand;
+            font-size: 0.75rem;
+            opacity: 1;
+            // transform: translate3d(-40px, 0, 0);
+            transition: 0.3s 0.4s;
+          }
+          .cbto {
+            display: inline-block;
+            margin-top: 24px;
+            font-size: 0.75rem;
+            color: $c06;
+            opacity: 0;
+            @include d(phone) {
+              opacity: 1;
+            }
+            transition: 0.3s 0s;
+            &:hover {
+              color: $c03;
+              transition-delay: 0s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#tickets .cbslider .cbws:hover .infocbws {
+  opacity: 1;
+  transition: 0.3s;
+
+}
+
+#tickets .cbslider .cbws:hover .infocbws .infocb {
+  transform: translate3d(0, 0, 0);
+}
+
+#tickets .cbslider .cbws:hover .infocbws .infocb .cbto {
+  opacity: 1;
+}
+
+#tickets .cbslider .cbws:hover .infocbws {
+  background: linear-gradient(
+          90.2deg,
+          rgba(93, 20, 153, 0.85) 37.1%,
+          rgba(250, 113, 205, 0.9) 111.03%
+        );
+  transition: 0.3s;
+
+}

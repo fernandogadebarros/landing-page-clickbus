@@ -1,0 +1,26 @@
+$cols: 12;
+$gutter: 20px;
+$desktop: 1200px;
+$laptop: 1025px;
+$tablet: 769px;
+$phone: 700px;
+
+@mixin d($size) {
+  @if $size == desktop {
+    @media (max-width: #{$desktop}) {
+      @content;
+    }
+  } @else if $size == laptop {
+    @media (max-width: #{$laptop}) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (max-width: #{$tablet}) {
+      @content;
+    }
+  } @else if $size == phone {
+    @media (max-width: #{$phone}) {
+      @content;
+    }
+  }
+}

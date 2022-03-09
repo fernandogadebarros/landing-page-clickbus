@@ -1,0 +1,182 @@
+#footer {
+  margin-top: 154px;
+  @include d(phone) {
+    margin-top: 80px;
+  }
+  .bg-footertop {
+    padding: 40px 0;
+    background-color: $c07;
+  }
+  .wrap-con {
+    padding: 0 2%;
+  }
+  .footertop {
+    align-items: center;
+    @include d(tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+    .ftop {
+      max-width: 600px;
+      p:nth-child(1) {
+        font-family: $raleway;
+        font-size: 2rem;
+        font-weight: 900;
+        color: $c04;
+        @include d(laptop) {
+          margin-bottom: 10px;
+          font-size: 1.425rem;
+          line-height: 1;
+        }
+      }
+      p:nth-child(2) {
+        max-width: 400px;
+        font-family: $worksans;
+        font-size: 0.855rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $c04;
+        @include d(tablet) {
+          margin: 20px auto 0 auto;
+        }
+      }
+    }
+    .flex {
+      width: 100%;
+    }
+    .formtop {
+      padding-left: 120px;
+      justify-content: flex-end;
+      @include d(laptop) {
+        padding-left: 70px;
+      }
+      @include d(tablet) {
+        max-width: 500px;
+        padding: 20px 3.5% 0 1%;
+      }
+      @include d(phone) {
+        flex-direction: column;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.875rem;
+        margin: 0 5px;
+        border: 1px solid $c04;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        background: transparent;
+        @include d(phone) {
+          width: 100%;
+          margin: 10px 5px;
+        }
+      }
+      input[type="button"] {
+        width: 40%;
+        font-size: 0.875rem;
+        border: 1px solid $c04;
+        font-family: $worksans;
+        transition: 0.3s;
+        @include d(phone) {
+          width: 100%;
+          margin-top: 20px;
+        }
+        &:hover {
+          color: $c06;
+          background: $c08;
+          border-color: $c08;
+        }
+      }
+    }
+  }
+  .bg-footerdown {
+    padding: 60px 0 10px 0;
+    background-color: $c08;
+    @include d(phone) {
+      padding-top: 30px;
+    }
+    .gridfooter {
+      display: grid;
+      grid-template-areas: "col col col col";
+      @include d(phone) {
+        grid-template-areas: "col";
+        text-align: center;
+      }
+      .grid__footer {
+        h4 {
+          margin-bottom: 10px;
+          font-family: $raleway;
+          color: $c06;
+          @include d(phone) {
+            margin-top: 20px;
+          }
+        }
+        a {
+          font-family: $worksans;
+          font-size: 0.875rem;
+          font-weight: 300;
+          color: $c03;
+          transition: 0.3s;
+          &:hover {
+            color: $c07;
+          }
+        }
+      }
+    }
+    .copy {
+      justify-content: space-between;
+      margin-top: 20px;
+      padding-top: 30px;
+      border: 1px solid #ffffff20;
+      border-top-width: 1px;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-bottom-width: 0;
+      font-size: 0.625rem;
+      color: $c06;
+      @include d(phone) {
+        flex-direction: column;
+        text-align: center;
+      }
+      .dev {
+        @include d(phone) {
+          padding-top: 5px;
+        }
+        a {
+          color: $c03;
+        }
+      }
+    }
+  }
+}
+
+#footer .formtop input:focus,
+#footer .formtop input:valid {
+  color: $c01;
+  border-color: $c01;
+}
+
+.footertop ::-webkit-input-placeholder {
+  /* Edge */
+  font-size: 0.875rem;
+  color: $c04 !important;
+}
+
+.footertop :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 0.875rem;
+  color: $c04 !important;
+}
+
+.footertop ::placeholder {
+  font-size: 0.875rem;
+  color: $c04 !important;
+}
+
+#footer .footertop input:focus::-webkit-input-placeholder,
+#footer .footertop input:focus:-moz-placeholder,
+#footer .footertop input:focus:-ms-input-placeholder,
+#footer .footertop input:focus::placeholder {
+  color: $c01 !important;
+}

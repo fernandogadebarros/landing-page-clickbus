@@ -1,0 +1,115 @@
+#appsection {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin-top: 234px;
+  background: linear-gradient(270deg, #9b39ad 50%, #fa71cd 236.88%);
+  @include d(laptop) {
+    height: 45vh;
+  }
+  @include d(tablet) {
+    height: 600px
+  }
+  @include d(phone) {
+    height: 500px;
+  }
+  .gridapp {
+    display: grid;
+    grid-template-areas: "col col";
+    @include d(tablet) {
+      grid-template-areas: "col";
+    }
+    .griditem {
+      width: 100%;
+      .appimg {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .cbimg01 {
+          width: 620px;
+          margin-top: -120px;
+          @include d(laptop) {
+            width: 480px;
+            height: 480px;
+            margin-top: -70px;
+          }
+          @include d(tablet) {
+            margin-top: -140px;
+          }
+          @include d(phone) {
+            width: 300px;
+            height: 300px;
+          }
+        }
+        .cbimg02 {
+          position: absolute;
+          bottom: 40px;
+          right: 80px;
+          width: 200px;
+          @include d(laptop) {
+            width: 180px;
+            right: 60px;
+          }
+          @include d(tablet) {
+            right: 120px;
+          }
+          @include d(phone) {
+            display: none;
+          }
+        }
+      }
+    }
+    .w-text-app {
+      padding-top: 60px;
+      color: $c06;
+      @include d(laptop) {
+        padding-top: 30px;
+      }
+      @include d(tablet) {
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 12px;
+        font-size: 2.875rem;
+        font-family: $raleway;
+        font-weight: 900;
+        @include d(laptop) {
+          font-size: 1.875rem;
+        }
+        @include d(tablet) {
+          max-width: 500px;
+          margin: -40px auto 20px auto;
+        }
+        @include d(phone) {
+          font-size: 1.325rem;
+        }
+      }
+      p {
+        max-width: 700px;
+        font-family: $quicksand;
+        @include d(laptop) {
+          max-width: 500px;
+          font-size: 0.8rem;
+        }
+        @include d(tablet) {
+          margin: 0 auto;
+        }
+        @include d(phone) {
+          font-size: 0.875rem;
+        }
+      }
+      .btos {
+        @include d(tablet) {
+          justify-content: center;
+        }
+        a {
+          margin-top: 24px;
+          margin-right: 14px;
+          img {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}

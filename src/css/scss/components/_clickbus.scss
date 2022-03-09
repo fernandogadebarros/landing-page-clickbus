@@ -1,0 +1,60 @@
+#clickbus {
+  padding-top: 220px;
+  padding-bottom: 120px;
+  background: $c06;
+  @include d(tablet) {
+    padding-top: 100px;
+  }
+  @include d(phone) {
+    padding-top: 120px;
+  }
+  #gridroad {
+    display: grid;
+    grid-template-areas: "col col col";
+    padding-top: 92px;
+    @include d(phone) {
+      padding-top: 52px;
+      grid-template-areas: "col";
+    }
+    .griditem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh;
+      text-align: center;
+      transform: scale(0.9);
+      transition: 0.3s;
+      @include d(phone) {
+        margin: 20px 0;
+      }
+      a {
+        max-width: 340px;
+        color: $c04;
+        transition: 0.1s;
+        h4 {
+          margin-top: 24px;
+          font-family: $raleway;
+          font-size: 1.25rem;
+          font-weight: 900;
+          transition: 0.3s;
+        }
+        p {
+          margin-top: 6px;
+          font-family: $quicksand;
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: $c05;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+#clickbus #gridroad .griditem:hover {
+  transform: scale(1);
+}
+
+#clickbus #gridroad .griditem:hover a {
+  color: $c03;
+}
